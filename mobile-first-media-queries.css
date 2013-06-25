@@ -1,0 +1,27 @@
+/*  Mobile (less than or equal to 320px)
+---------------------------------------- */
+.code {}
+
+/*  Large mobile (wider than 320px)
+---------------------------------------- */
+@media only screen and (min-width: 321px) {
+  .code {}
+}
+
+/*  Tablet (wider than 600px)
+---------------------------------------- */
+@media only screen and (min-width: 600px) {
+  .code {}
+}
+
+/*  Desktop (wider than 1024px)
+---------------------------------------- */
+@media only screen and (min-width: 1024px) {
+  .code {}
+}
+
+/*  Large desktop (wider than 1140px)
+---------------------------------------- */
+@media only screen and (min-width: 1140px) {
+  .code {}
+}
