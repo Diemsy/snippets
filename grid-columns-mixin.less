@@ -3,9 +3,7 @@
   @iterations: 1;
   
   .column-loop (@index) when (@index =< @column-count) {
-    .box-@{index} {
-      width: ((100% / @column-count) * @index);
-    }
+    .box-@{index} { width: ((100% / @column-count) * @index); }
     .column-loop(@index + 1);
   }
   
