@@ -1,0 +1,33 @@
+// Create columns
+.create-columns(@column-count) {
+  @iterations: 1;
+  .grid-loop (@index) when (@index =< @column-count) {
+    .box-@{index} {
+      width: 100% / @column-count * @index;
+    }
+    .grid-loop(@index + 1);
+  }
+  .grid-loop(@column-count) {};
+  .grid-loop(@iterations);
+  .box-full {
+    width: 100%;
+  }
+  .box-half {
+    width: 50%;
+  }
+  .box-third {
+    width: 100% / 3;
+  }
+  .box-two-thirds {
+    width: 100% / 3 * 2;
+  }
+  .box-fifth {
+    width: 100% / 5;
+  }
+  .box-sixth {
+    width: 100% / 6;
+  }
+}
+
+// Usage
+.create-columns(16);
