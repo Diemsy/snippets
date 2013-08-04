@@ -1,4 +1,1 @@
-CSS & LESS snippets
-============
-
-Snippets - Pow!
+# Snippets - Pow!
