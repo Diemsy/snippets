@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 + WAI-ARIA Roles</title>
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <ul>
+          <li><a href="/">Menu Item</a></li>
+          <li><a href="/">Menu Item</a></li>
+          <li><a href="/">Menu Item</a></li>
+          <li><a href="/">Menu Item</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section role="region" aria-label="Hero block">
+      ...
+    </section>
+    <main role="main">
+      <article role="article">
+        <header>
+          <h1>HTML5 + WAI-ARIA Roles</h1>
+        </header>
+        ...
+        <footer>
+          <section role="region" aria-label="About the author">
+            ...
+          </section>
+          <section role="region" aria-label="Comments">
+            ...
+          </section>
+        </footer>
+      </article>
+      <aside role="complimentary">
+        <section role="region" aria-label="Popular articles">
+          ...
+        </section>
+        <section role="region" aria-label="Blog categories">
+          ...
+        </section>
+      </aside>
+    </main>
+    <footer role="contentinfo">
+      ...
+    </footer>
+  </body>
+</html>
