@@ -1,6 +1,8 @@
-/* --------------------------------------------------
-  SCROLL TO ELEMEMT
-  
+/**
+  * Scroll to element
+  */
+
+/*
   'data-scroll-start' AND 'data-scroll-end' VALUES MUST MATCH
   
   Trigger
@@ -8,12 +10,11 @@
   
   Element
   <div data-scroll-end="area">Element</div>
--------------------------------------------------- */
+ */
 
-/*
-  VERSION 1
-  Accepts: 'data-scroll-trigger' value and speed in ms (default is 500)
-*/
+/**
+  * Version 1
+  */
 function scrollToElement(position, speed) {
   var container = $('html, body');
   container.animate({
@@ -32,10 +33,9 @@ function scrollToElement(position, speed) {
   });
 })(jQuery);
 
-/*
-  VERSION 2
-  Accepts: speed in ms (default is 500)
-*/
+/**
+  * Version 2
+  */
 function scrollToElement(speed) {
   var container = $('html, body');
   var element = $('[data-scroll-start]');

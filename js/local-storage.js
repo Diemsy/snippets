@@ -1,6 +1,6 @@
-/* --------------------------------------------------
-  LOCAL STORAGE
--------------------------------------------------- */
+/**
+  * Local storage
+  */
 
 // Check if storage is available
 if (typeof(Storage) !== 'undefined') {

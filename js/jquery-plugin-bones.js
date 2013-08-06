@@ -1,6 +1,6 @@
-/* --------------------------------------------------
-  JQUERY PLUGIN BONES
--------------------------------------------------- */
+/**
+  * jQuery plugin bootstrap
+  */
 (function($, window, document, undefined) {
   
   // ECMAScript Object.create shim

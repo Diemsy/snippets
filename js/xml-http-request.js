@@ -1,6 +1,6 @@
-/* --------------------------------------------------
-  XMLHttpRequest (GET, POST)
--------------------------------------------------- */
+/**
+  * XMLHttpRequest (GET, POST)
+  */
 
 // GET
 var xhr = new XMLHttpRequest();

@@ -1,6 +1,7 @@
-/* --------------------------------------------------
-  SELF EXECUTING FUNCITONS
--------------------------------------------------- */
+/**
+  * Self executing functions
+  */
+  
 // On document ready execute this function
 $(document).ready(function() {
   // do something

@@ -1,6 +1,6 @@
-/* --------------------------------------------------
-  VALIDATION REGULAR EXPRESSIONS
--------------------------------------------------- */
+/**
+  * Validation using regular expressions
+  */
 
 /* EMAIL */
 function isEmailAddress(value) {
