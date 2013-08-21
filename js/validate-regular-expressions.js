@@ -2,39 +2,71 @@
   * Validation using regular expressions
   */
 
-/* EMAIL */
+/**
+  * Email address
+  * Accepts: valid email addess (it's tricky to cover all cases tho)
+  */
 function isEmailAddress(value) {
   var pattern = new RegExp(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/);
   return pattern.test(value); 
 }
-/* PHONE */
+
+/**
+  * Phone
+  * Accepts: 1231231234, (123) 123-1234, 123-123-1234, 123 123 1234
+  */
 function isPhoneNumber(value) {
   var pattern = new RegExp(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
   return pattern.test(value); 
 }
-/* ZIP CODE */
+
+/**
+  * Zip code
+  * Accepts: 12345, 12345-1234
+  */
 function isZipCode(value) {
   var pattern = new RegExp(/^\d{5}(-\d{4})?$/);
   return pattern.test(value); 
 }
-/* NUMBER */
+
+/**
+  * Number
+  * Accepts: real full numbers
+  */
 function isNumber(value) {
   var pattern = new RegExp(/^[0-9]+$/);
   return pattern.test(value); 
 }
-/* LETTERS */
-function isAlpha(value) {
+
+/**
+  * Letters w/out spaces
+  * Accepts: 'Kris'
+  */
+function isAlphaOnly(value) {
   var pattern = new RegExp(/^[A-Za-z]+$/);
   return pattern.test(value); 
 }
-/* ALPHANUMERIC */
+
+/**
+  * Letters with spaces
+  * Accepts: 'Kris Olszewski'
+  */
+function isAlpha(value) {
+  var pattern = new RegExp(/^[A-Za-z ]+$/);
+  return pattern.test(value); 
+}
+
+/**
+  * Letters and numbers
+  * Accepts: 'Kris123'
+  */
 function isAlphanumeric(value) {
   var pattern = new RegExp(/^[0-9a-zA-Z]+$/);
   return pattern.test(value); 
 }
 
-(function($) {
-  var value = $('.js-input').val();
+(function() {
+  var value = document.querySelector(".js-input").value;
   
   isEmailAddress(value); // true or false
   
@@ -44,8 +76,10 @@ function isAlphanumeric(value) {
   
   isNumber(value); // true or false
   
+  isAlphaOnly(value); // true or false
+  
   isAlpha(value); // true or false
   
   isAlphanumeric(value); // true or false
 	
-})(jQuery);
+})();
