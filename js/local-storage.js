@@ -11,7 +11,7 @@ if (typeof(Storage) !== 'undefined') {
 // Set local storage items
 localStorage.firstName = 'Kris';
 // OR
-localStorage.setItem('firstName','Kris';
+localStorage.setItem('firstName','Kris');
 // Get local storage item
 var name = localStorage.firstName;
 // OR
