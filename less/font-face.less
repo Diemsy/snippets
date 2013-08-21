@@ -1,0 +1,34 @@
+//
+// @font-face mixin
+// accepts 'font name', 'path to font', 'file name'
+// --------------------------------------------------
+
+.font-face-mixin(@font-name, @font-file-path, @font-file-name) {
+  @font-face {
+    font-family: '@{font-name}';
+    src: url('@{font-file-path}/@{font-file-name}.eot');
+    src: url('@{font-file-path}/@{font-file-name}.eot?#iefix') format('embedded-opentype'),
+      url('@{font-file-path}/@{font-file-name}.woff') format('woff'),
+      url('@{font-file-path}/@{font-file-name}.ttf') format('truetype'),
+      url('@{font-file-path}/@{font-file-name}.svg#@{font-name}') format('svg');
+  }
+}
+
+//
+// Create @font-face (example)
+// --------------------------------------------------
+
+.font-face-mixin('OpenSansLight', '/fonts/open-sans-light', 'OpenSans-Light-webfont');
+
+//
+// Font style mixin with a guard (example)
+// --------------------------------------------------
+
+.font(@font-family) {
+  font-weight: normal;
+  font-style: normal;
+  .font-family(@font-family);
+}
+.font-family(@font-family) when (@font-family = light) {
+  font-family: 'OpenSansLight';
+}
