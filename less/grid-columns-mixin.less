@@ -3,21 +3,31 @@
   @iterations: 1;
   
   .column-loop (@index) when (@index =< @column-count) {
-    .box-@{index} { width: ((100% / @column-count) * @index); }
+    .box-@{index}-@{column-count} { width: ((100% / @column-count) * @index); }
     .column-loop((@index + 1));
   }
   
   .column-loop(@column-count) {};
   .column-loop(@iterations);
-  
-  // Additional semantic classes
-  .box-full { width: 100%; }
-  .box-half { width: 50%; }
-  .box-third { width: (100% / 3); }
-  .box-two-thirds { width: ((100% / 3) * 2); }
-  .box-fifth { width: (100% / 5); }
-  .box-sixth { width: (100% / 6); }
 }
 
-// Usage
+// Usage with 16 columns
 .create-columns(16);
+
+// Output
+// .box-1-16{width:6.25%}
+// .box-2-16{width:12.5%}
+// .box-3-16{width:18.75%}
+// .box-4-16{width:25%}
+// .box-5-16{width:31.25%}
+// .box-6-16{width:37.5%}
+// .box-7-16{width:43.75%}
+// .box-8-16{width:50%}
+// .box-9-16{width:56.25%}
+// .box-10-16{width:62.5%}
+// .box-11-16{width:68.75%}
+// .box-12-16{width:75%}
+// .box-13-16{width:81.25%}
+// .box-14-16{width:87.5%}
+// .box-15-16{width:93.75%}
+// .box-16-16{width:100%}
