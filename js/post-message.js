@@ -1,5 +1,5 @@
 /**
-  * Sender
+  * Send data from domain A to domain B and receive return data from domain B
   * 
   * Requires:
   * <iframe
@@ -27,7 +27,7 @@ window.onload = function() {
 };
 
 /**
-  * Receiver
+  * Receive data from domain A and send return data from domain B to domain A
   */
 window.addEventListener("message", function(event) {
   if (event.origin !== "http://www.sender-domain.com") return;
