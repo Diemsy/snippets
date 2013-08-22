@@ -1,5 +1,15 @@
 /**
   * Sender
+  * 
+  * Requires:
+  * <iframe
+  *  src=""//www.destination-domain.com/post-message-listener.html"
+  *  tabindex="-1"
+  *  style="display:none; visibility:hidden"
+  *  height="0"
+  *  width="0"
+  *  id="post-message-iframe"
+  * ></iframe>
   */
   
 window.onload = function() {
