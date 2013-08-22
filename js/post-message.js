@@ -22,7 +22,7 @@ window.onload = function() {
   
   window.addEventListener('message', function(event) {
     if (event.origin !== domain) return;
-    console.log('response:  ', event.data);
+    console.log('response: ', event.data);
   }, false);
 };
 
