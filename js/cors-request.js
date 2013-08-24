@@ -6,12 +6,12 @@ function createCORSrequest(method, url) {
   // Create XHR object
   var xhr = new XMLHttpRequest();
   
-  if ("withCredentials" in xhr) {
+  if ('withCredentials' in xhr) {
   
     // XMLHTTPRequest2 object
     xhr.open(method, url, true);
     
-  } else if (typeof XDomainRequest != "undefined") {
+  } else if (typeof XDomainRequest != 'undefined') {
   
     // XDomainRequest object for IE
     xhr = new XDomainRequest();
