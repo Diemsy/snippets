@@ -1,0 +1,70 @@
+@import '_variables';
+@import '_mixins';
+
+/**
+  * --------------------------------------------------
+  * Forms
+  * --------------------------------------------------
+  *
+  * Recommended usage:
+  * -------------------------
+  * <input type="{type}" class="form-input form-input-{modifier}" placeholder={text}>
+  *
+  */
+
+.form-input {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  border: 1px solid transparent;
+  background-color: $form-input-background-color-default;
+  vertical-align: middle;
+  cursor: pointer;
+  @include form-input-action($form-input-color-default, $form-input-border-color-default);
+  @include form-input-size($form-input-font-size-default, $form-input-line-height-default, $form-input-padding-default, $form-input-border-radius-default);
+  &:hover,
+  &:focus {
+    outline: 0;
+    transition: 0.15s all ease;
+  }
+  &[disabled],
+  &.is-disabled,
+  fieldset[disabled] & {
+    opacity: 0.65;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &::-webkit-input-placeholder { color: $form-input-placeholder-color; }
+  &::-moz-placeholder { color: $form-input-placeholder-color; }
+  &:-ms-input-placeholder { color: $form-input-placeholder-color; }
+  &:-moz-placeholder { color: $form-input-placeholder-color; }
+}
+
+/**
+  * Action modifiers
+  */
+
+.form-input-danger {
+  @include form-input-action($form-input-color-danger, $form-input-border-color-danger);
+}
+
+.form-input-success {
+  @include form-input-action($form-input-color-success, $form-input-border-color-success);
+}
+
+/**
+  * Size modifiers
+  */
+  
+.form-input-small {
+  @include form-input-size($form-input-font-size-small, $form-input-line-height-small, $form-input-padding-small, $form-input-border-radius-small);
+}
+
+.form-input-large {
+  @include form-input-size($form-input-font-size-large, $form-input-line-height-large, $form-input-padding-large, $form-input-border-radius-large);
+}
+
+.form-input-huge {
+  @include form-input-size($form-input-font-size-huge, $form-input-line-height-huge, $form-input-padding-huge, $form-input-border-radius-huge);
+}

@@ -1,0 +1,34 @@
+//
+// Button mixins
+// --------------------------------------------------
+
+// Action
+// -------------------------
+@mixin form-input-action($color, $border-color) {
+  border-color: $border-color;
+  color: $color;
+  &:hover,
+  &:focus {
+    border-color: darken($border-color, 10%);
+  }
+  &[disabled],
+  &.is-disabled,
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-active {
+      border-color: $border-color;
+    }
+  }
+}
+
+// Sizing
+// -------------------------
+@mixin form-input-size($font-size, $line-height, $padding, $border-radius) {
+  padding: $padding;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  line-height: $line-height;
+}
