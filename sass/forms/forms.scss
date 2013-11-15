@@ -12,6 +12,49 @@
   *
   */
 
+/**
+  * Normalize default form elements
+  */
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select optgroup {
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+}
+
+input[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    height: auto;
+  }
+}
+
+/**
+  * Form input
+  */
+  
 .form-input {
   box-sizing: border-box;
   position: relative;
@@ -42,7 +85,7 @@
 }
 
 /**
-  * Action modifiers
+  * Form input action modifiers
   */
 
 .form-input-danger {
@@ -54,7 +97,7 @@
 }
 
 /**
-  * Size modifiers
+  * Form input size modifiers
   */
   
 .form-input-small {
