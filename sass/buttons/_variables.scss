@@ -9,10 +9,10 @@ $button-font-size-default: 13px;
 $button-font-size-large: 15px;
 $button-font-size-huge: 18px;
 
-$button-line-height-small: (20/11);
-$button-line-height-default: (20/13);
-$button-line-height-large: (20/15);
-$button-line-height-huge: (20/18);
+$button-line-height-small: 14px;
+$button-line-height-default: 20px;
+$button-line-height-large: 20px;
+$button-line-height-huge: 22px;
 
 // Shape
 // -------------------------
@@ -23,10 +23,10 @@ $button-border-radius-huge: 5px;
 
 // Sizing
 // -------------------------
-$button-padding-small: 1px 5px;
+$button-padding-small: 4px 8px;
 $button-padding-default: 6px 12px;
 $button-padding-large: 10px 20px;
-$button-padding-huge: 12px 24px;
+$button-padding-huge: 11px 24px;
 
 $button-block-spacing: 10px;
 

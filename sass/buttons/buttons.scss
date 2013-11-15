@@ -30,16 +30,17 @@
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
-  transition: 0.15s all ease;
   -webkit-appearance: none;
   @include button-size($button-font-size-default, $button-line-height-default, $button-padding-default, $button-border-radius-default);
   &:hover,
   &:focus {
     text-decoration: none;
+    transition: 0.15s all ease;
   }
   &:active,
   &.is-active {
     outline: 0;
+    transition: 0.15s all ease;
   }
   &[disabled],
   &.is-disabled,
