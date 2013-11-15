@@ -1,0 +1,180 @@
+@import '_variables';
+@import '_mixins';
+
+/**
+  * --------------------------------------------------
+  * Buttons
+  * --------------------------------------------------
+  *
+  * Recommended usage:
+  * -------------------------
+  * <a href="{link}" class="button button-{modifier} is-{state}" role="button">{text}</a>
+  * <input type="submit" class="button button-{modifier} is-{state}" role="button" value="{text}">
+  * <button type="button" class="button button-{modifier} is-{state}" role="button">{text}</button>
+  *
+  */
+ 
+/**
+  * Core button
+  */
+   
+.button {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  border: 1px solid transparent;
+  background-color: transparent;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.15s all ease;
+  -webkit-appearance: none;
+  @include button-size($button-font-size-default, $button-line-height-default, $button-padding-default, $button-border-radius-default);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  &:active,
+  &.is-active {
+    outline: 0;
+  }
+  &[disabled],
+  &.is-disabled,
+  fieldset[disabled] & {
+    opacity: 0.65;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+/**
+  * Link button
+  */
+  
+.button-link {
+  color: $button-link-color;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+  &,
+  &:active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $button-link-color-hover;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $button-link-color-disabled;
+      text-decoration: none;
+    }
+  }
+}
+
+/**
+  * Action modifiers
+  */
+  
+.button-default {
+  @include button-action($button-color-default, $button-border-color-default, $button-background-color-default);
+}
+
+.button-primary {
+  @include button-action($button-color-primary, $button-border-color-primary, $button-background-color-primary);
+}
+
+.button-danger {
+  @include button-action($button-color-danger, $button-border-color-danger, $button-background-color-danger);
+}
+
+.button-warning {
+  @include button-action($button-color-warning, $button-border-color-warning, $button-background-color-warning);
+}
+
+.button-success {
+  @include button-action($button-color-success, $button-border-color-success, $button-background-color-success);
+}
+
+.button-info {
+  @include button-action($button-color-info, $button-border-color-info, $button-background-color-info);
+}
+
+/**
+  * Size modifiers
+  */
+  
+.button-small {
+  @include button-size($button-font-size-small, $button-line-height-small, $button-padding-small, $button-border-radius-small);
+}
+
+.button-large {
+  @include button-size($button-font-size-large, $button-line-height-large, $button-padding-large, $button-border-radius-large);
+}
+
+.button-huge {
+  @include button-size($button-font-size-huge, $button-line-height-huge, $button-padding-huge, $button-border-radius-huge);
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  & + & {
+    margin-top: $button-block-spacing;
+  }
+}
+
+/**
+  * Group
+  */
+
+.button-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  > .button {
+    position: relative;
+    float: left;
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-active {
+      z-index: 2;
+    }
+    & + .button {
+      margin-left: -1px;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

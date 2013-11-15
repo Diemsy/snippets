@@ -1,0 +1,73 @@
+//
+// Button variables
+// --------------------------------------------------
+
+// Typography
+// -------------------------
+$button-font-size-small: 11px;
+$button-font-size-default: 13px;
+$button-font-size-large: 15px;
+$button-font-size-huge: 18px;
+
+$button-line-height-small: (20/11);
+$button-line-height-default: (20/13);
+$button-line-height-large: (20/15);
+$button-line-height-huge: (20/18);
+
+// Shape
+// -------------------------
+$button-border-radius-small: 2px;
+$button-border-radius-default: 3px;
+$button-border-radius-large: 4px;
+$button-border-radius-huge: 5px;
+
+// Sizing
+// -------------------------
+$button-padding-small: 1px 5px;
+$button-padding-default: 6px 12px;
+$button-padding-large: 10px 20px;
+$button-padding-huge: 12px 24px;
+
+$button-block-spacing: 10px;
+
+// Link
+// -------------------------
+$button-link-color: #5d9cec;
+$button-link-color-hover: #4a89dc;
+$button-link-color-disabled: #aab2bd;
+
+// Default action
+// -------------------------
+$button-color-default: #434a54;
+$button-border-color-default: #656d78;
+$button-background-color-default: #fff;
+
+// Primary action
+// -------------------------
+$button-color-primary: #fff;
+$button-border-color-primary: #967adc;
+$button-background-color-primary: #ac92ec;
+
+// Danger action
+// -------------------------
+$button-color-danger: #fff;
+$button-border-color-danger: #da4453;
+$button-background-color-danger: #ed5565;
+
+// Warning action
+// -------------------------
+$button-color-warning: #fff;
+$button-border-color-warning: #f6bb42;
+$button-background-color-warning: #ffce54;
+
+// Success action
+// -------------------------
+$button-color-success: #fff;
+$button-border-color-success: #37bc9b;
+$button-background-color-success: #48cfad;
+
+// Info action
+// -------------------------
+$button-color-info: #fff;
+$button-border-color-info: #3bafda;
+$button-background-color-info: #4fc1e9;

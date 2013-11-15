@@ -1,0 +1,41 @@
+//
+// Button mixins
+// --------------------------------------------------
+
+// Action
+// -------------------------
+@mixin button-action($color, $border-color, $background-color) {
+  border-color: $border-color;
+  background-color: $background-color;
+  color: $color;
+  &:hover,
+  &:focus {
+    background-color: lighten($background-color, 6%);
+  }
+  &:active,
+  &.is-active {
+    border-color: darken($border-color, 8%);
+    background-color: darken($background-color, 5%);
+  }
+  &[disabled],
+  &.is-disabled,
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-active {
+      border-color: $border-color;
+      background-color: $background-color;
+    }
+  }
+}
+
+// Sizing
+// -------------------------
+@mixin button-size($font-size, $line-height, $padding, $border-radius) {
+  padding: $padding;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  line-height: $line-height;
+}
