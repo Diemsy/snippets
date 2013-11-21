@@ -1,0 +1,24 @@
+// Grid variables
+// -------------------------
+
+// Media queries
+$grid-screen-small: 479px;
+$grid-screen-medium: 480px;
+$grid-screen-medium-max: 767px;
+$grid-screen-regular: 768px;
+$grid-screen-regular-max: 1139px;
+$grid-screen-large: 1140px;
+
+// Row gutter
+$row-no-gutter: 0;
+$row-default-gutter: 0 -20px;
+$row-tiny-gutter: 0 -5px;
+$row-small-gutter: 0 -10px;
+$row-large-gutter: 0 -30px;
+
+// Column gutter
+$column-no-gutter: 0;
+$column-default-gutter: 0 20px;
+$column-tiny-gutter: 0 5px;
+$column-small-gutter: 0 10px;
+$column-large-gutter: 0 30px;
