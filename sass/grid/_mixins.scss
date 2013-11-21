@@ -1,0 +1,10 @@
+// Grid mixins
+// -------------------------
+
+@mixin create-columns( $count, $prefix ) {
+  @for $i from 1 through $count {
+    .#{$prefix}-#{$i}of#{$count} {
+      width: ((100% / $count) * $i);
+    }
+  }
+}
