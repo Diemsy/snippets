@@ -4,10 +4,11 @@
 
 /**
   * Email address
-  * Accepts: valid email addess (it's tricky to cover all cases tho)
+  * Accepts: valid email addess
+  * Notes: http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#valid-e-mail-address
   */
 function isEmailAddress(value) {
-  var pattern = new RegExp(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/);
+  var pattern = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
   return pattern.test(value); 
 }
 
