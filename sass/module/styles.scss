@@ -1,3 +1,4 @@
+// Requires Sass 3.3
 @mixin module( $name ) {
   .#{$name} {
     @at-root {
@@ -8,12 +9,12 @@
 
 @include module( 'class' ) {
   #{&}-header {
-    // ...
+    // ...do work
   }
   #{&}-title {
-    // ...
+    // ...do work
   }
   #{&}-body {
-    // ...
+    // ...do work
   }
 } // .module
