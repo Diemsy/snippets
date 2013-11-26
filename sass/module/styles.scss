@@ -1,0 +1,19 @@
+@mixin module( $name ) {
+  .#{$name} {
+    @at-root {
+      @content;
+    }
+  }
+}
+
+@include module( 'class' ) {
+  #{&}-header {
+    // ...
+  }
+  #{&}-title {
+    // ...
+  }
+  #{&}-body {
+    // ...
+  }
+} // .module
