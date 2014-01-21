@@ -27,7 +27,7 @@
         }]
     };
 
-    var CreateMenu = function (data) {
+    var createMenu = function (data) {
         var list = document.createElement('ul');
         for (var i = 0; i < data.length; i++) {
             var item = document.createElement('li');
@@ -36,7 +36,7 @@
             link.innerHTML = data[i].title;
             item.appendChild(link);
             if (data[i].list) {
-                item.appendChild(CreateMenu(data[i].list));
+                item.appendChild(createMenu(data[i].list));
             }
             list.appendChild(item);
         }
@@ -44,6 +44,6 @@
     };
 
     var nav = document.querySelector('.main-navigation');
-    nav.appendChild(CreateMenu(data.list));
+    nav.appendChild(createMenu(data.list));
 
 })(window, document);
