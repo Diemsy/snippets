@@ -27,40 +27,23 @@
         }]
     };
 
-    var Menu = {
-        init: function (data, container) {
-            var self = this;
-            self.data = data;
-            self.container = document.querySelector(container);
-            self.container.appendChild(self.createList(self.data.list));
-        },
-        createList: function (data) {
-            var self = this;
-            var list = self.createElement('ul');
-            for (var i = 0; i < data.length; i++) {
-                var item = self.createElement('li');
-                var link = self.createElement('a', {
-                    href: data[i].href,
-                    title: data[i].title
-                });
-                item.appendChild(link);
-                if (data[i].list) {
-                    item.appendChild(self.createList(data[i].list));
-                }
-                list.appendChild(item);
+    var CreateMenu = function (data) {
+        var list = document.createElement('ul');
+        for (var i = 0; i < data.length; i++) {
+            var item = document.createElement('li');
+            var link = document.createElement('a');
+            link.href = data[i].href;
+            link.innerHTML = data[i].title;
+            item.appendChild(link);
+            if (data[i].list) {
+                item.appendChild(CreateMenu(data[i].list));
             }
-            return list;
-        },
-        createElement: function (el, data) {
-            var element = document.createElement(el);
-            if (data) {
-                element.href = data.href;
-                element.innerHTML = data.title;
-            }
-            return element;
+            list.appendChild(item);
         }
+        return list;
     };
 
-    Menu.init(data, '#menu');
+    var nav = document.querySelector('.main-navigation');
+    nav.appendChild(CreateMenu(data.list));
 
 })(window, document);
