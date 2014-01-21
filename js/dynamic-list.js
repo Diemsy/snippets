@@ -29,14 +29,14 @@
 
     var createMenu = function (data) {
         var list = document.createElement('ul');
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < data.list.length; i++) {
             var item = document.createElement('li');
             var link = document.createElement('a');
-            link.href = data[i].href;
-            link.innerHTML = data[i].title;
+            link.href = data.list[i].href;
+            link.innerHTML = data.list[i].title;
             item.appendChild(link);
-            if (data[i].list) {
-                item.appendChild(createMenu(data[i].list));
+            if (data.list[i].list) {
+                item.appendChild(createMenu(data.list[i]));
             }
             list.appendChild(item);
         }
@@ -44,6 +44,6 @@
     };
 
     var nav = document.querySelector('.main-navigation');
-    nav.appendChild(createMenu(data.list));
+    nav.appendChild(createMenu(data));
 
 })(window, document);
