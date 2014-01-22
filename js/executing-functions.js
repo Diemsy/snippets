@@ -1,5 +1,5 @@
 /**
-  * Self executing functions
+  *  Executing functions
   */
   
 // On document ready execute this function
@@ -12,17 +12,17 @@ $(function() {
   // do something
 });
 
-// Self executing anonymous JS function
+// Immediately-invoked function expression
 (function() {
   // do something
 })();
 
-// Self executing anonymous JS function with $ as jQuery
+// Immediately-invoked function expression with $ as jQuery
 (function($) {
   // do something
 })(jQuery);
 
-// Self executing anonymous JS function with full security protection
+// Immediately-invoked function expression with full security protection
 (function($, window, document, undefined) {
   // do something
 })(jQuery, window, document);
