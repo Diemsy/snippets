@@ -8,16 +8,6 @@
 
   var Utility = Utility || {};
 
-  // Hide element
-  Utility.hide = function (el) {
-    el.style.display = 'none';
-  };
-
-  // Show element
-  Utility.show = function (el) {
-    el.style.display = '';
-  };
-
   // Check if element has a class
   Utility.hasClass = function (el, className) {
     if (el.classList) {
