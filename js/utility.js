@@ -27,7 +27,7 @@
     }
   };
 
-  // Add class to element
+  // Add a class to element
   Utility.addClass = function (el, className) {
     if (el.classList) {
       el.classList.add(className);
@@ -36,7 +36,7 @@
     }
   };
 
-  // Remove class from element
+  // Remove a class from element
   Utility.removeClass = function (el, className) {
     if (el.classList) {
       el.classList.remove(className);
@@ -45,7 +45,7 @@
     }
   };
 
-  // Toggle element class
+  // Toggle a class on element
   Utility.toggleClass = function (el, className) {
     if (el.classList) {
       el.classList.toggle(className);
