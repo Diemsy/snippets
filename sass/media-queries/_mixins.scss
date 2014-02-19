@@ -1,0 +1,84 @@
+//
+// Media Query - above breakpoint
+// --------------------------------------------------
+
+@mixin mq-above( $breakpoint ) {
+  @if $breakpoint == small  {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+  @else if $breakpoint == medium  {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $breakpoint == regular  {
+    @media only screen and (min-width: 980px) { @content; }
+  }
+  @else if $breakpoint == large  {
+    @media only screen and (min-width: 1140px) { @content; }
+  }
+}
+
+//
+// Media Query - between breakpoints
+// --------------------------------------------------
+
+@mixin mq-between( $breakpoint ) {
+  @if $breakpoint == small-medium  {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $breakpoint == medium-regular  {
+    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+  }
+  @else if $breakpoint == regular-large  {
+    @media only screen and (min-width: 980px) and (max-width: 1139px) { @content; }
+  }
+}
+
+/**
+  * Module
+  * -------------------------
+  *
+  */
+  
+.module {
+  
+  @include mq-above( small ) {
+  
+  } // small
+  
+  @include mq-between( small-medium ) {
+  
+  } // small-medium
+  
+  @include mq-above( medium ) {
+  
+  } // medium
+  
+  @include mq-between( medium-regular ) {
+  
+  } // medium-regular
+  
+  @include mq-above( regular ) {
+  
+  } // regular
+  
+  @include mq-between( regular-large ) {
+  
+  } // regular-large
+  
+  @include mq-above( large ) {
+  
+  } // large
+  
+  .ie & {
+    
+  } // .ie &
+  
+  .ie8 & {
+    
+  } // .ie8 &
+  
+  .ie9 & {
+    
+  } // .ie9 &
+  
+} // .module
