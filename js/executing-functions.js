@@ -1,28 +1,38 @@
 /**
-  *  Executing functions
+  *  Function execution
   */
   
-// On document ready execute this function
+// jQuery on document ready
 $(document).ready(function() {
+
   // do something
+  
 });
 
-// On document ready execute this function - shorthand
+// jQuery on document ready shorthand
 $(function() {
+
   // do something
+  
 });
 
 // Immediately-invoked function expression
-(function() {
+;(function() {
+
   // do something
+  
 })();
 
 // Immediately-invoked function expression with $ as jQuery
-(function($) {
+;(function($) {
+
   // do something
+  
 })(jQuery);
 
-// Immediately-invoked function expression with full security protection
-(function($, window, document, undefined) {
+// Immediately-invoked function expression with blows and whistles
+;(function($, window, document, undefined) {
+
   // do something
+  
 })(jQuery, window, document);

@@ -1,31 +1,31 @@
 /**
-  * Module pattern
+  * Module pattern with loose augmentation
   */
-(function(window, document, undefined) {
-
-  'use strict';
   
-  // Define module
-  var module = (function() {
-    
-    var privateVar;
-    
-    // Set private function
-    function privateFunction() {
-      // ...do work
-    }
-    
-    // Return public function
-    return {
-      publicFunction: function() {
-        // ...do work
-        return;
-      }
-    };
-    
-  })();
-  
-  // Call public function
-  module.publicFunction();
+var Module = (function (api, window, document, undefined) {
 
-})(window, document);
+  var counter = 0;
+  
+  api.get = function () {
+    return counter;
+  };
+  
+  api.increment = function () {
+    return ( counter += 1 );
+  };
+  
+  api.decrement = function () {
+    return ( counter -= 1 );
+  };
+  
+  api.set = function (value) {
+    return ( counter = value );
+  };
+  
+  api.reset = function () {
+    return ( counter = 0 );
+  };
+  
+  return api;
+  
+})(Module || {}, window, document);

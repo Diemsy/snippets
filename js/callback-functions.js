@@ -1,10 +1,12 @@
 /**
   * Callback function
   */
+  
 function CallMeBack(callback) {
   var message = "I'm back";
   return callback(message);
 }
+
 (function($) {
   CallMeBack(function(data) {
     console.log(data);
@@ -14,10 +16,12 @@ function CallMeBack(callback) {
 /**
   * Callback function on event
   */
+  
 function CallMeBack(callback) {
   var message = "I'm back";
   return callback(message);
 }
+
 (function($) {
   var button = $('.js-button');
   button.on('click', function(e) {
@@ -31,11 +35,13 @@ function CallMeBack(callback) {
 /**
   * Callback function on event and pass object
   */
+  
 function CallMeBack(obj, callback) {
   console.log(obj);
   var message = "I'm back";
   return callback(message);
 }
+
 (function($) {
   var button = $('.js-button');
   button.on('click', function(e) {
