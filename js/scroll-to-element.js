@@ -1,54 +1,29 @@
 /**
   * Scroll to element
+  * --------------------------------------------------
+  *
+  * Recommneded usage
+  * <a data-scroll-trigger="area">Trigger</a>
+  * <div data-scroll-target="area">Target</div>
   */
 
-/*
-  'data-scroll-start' AND 'data-scroll-end' VALUES MUST MATCH
+
+;(function($) {
+
+  'use strict';
   
-  Trigger
-  <a data-scroll-start="area">Trigger</a>
+  var container = $('html, body');
+  var trigger = $('[data-scroll-trigger]');
   
-  Element
-  <div data-scroll-end="area">Element</div>
- */
-
-/**
-  * Version 1
-  */
-function scrollToElement(position, speed) {
-  var container = $('html, body');
-  container.animate({
-    scrollTop: $('[data-scroll-end="' + position + '"]').offset().top
-  }, speed || 500);
-  return;
-}
-
-(function($) {
-  var element = $('[data-scroll-start]');
-  element.on('click', function(e) {
-    var position = $(this).data('scroll-start');
-    var speed = 1000;
-    scrollToElement(position, speed);
-    e.preventDefault();
-  });
-})(jQuery);
-
-/**
-  * Version 2
-  */
-function scrollToElement(speed) {
-  var container = $('html, body');
-  var element = $('[data-scroll-start]');
-  element.on('click', function(e) {
-    var position = $(this).data('scroll-start');
+  trigger.on('click', function(e) {
+    e.preventDefault()
+    
+    var id = $(this).data('scroll-trigger');
+    
     container.animate({
-      scrollTop: $('[data-scroll-end="' + position + '"]').offset().top
-    }, speed || 500);
-    e.preventDefault();
+      scrollTop: $('[data-scroll-target="' + id + '"]').offset().top
+    }, 500);
+    
   });
-  return;
-}
-
-(function($) {
-  scrollToElement(800);
+  
 })(jQuery);
