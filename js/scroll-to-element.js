@@ -2,11 +2,11 @@
   * Scroll to element
   * --------------------------------------------------
   *
-  * Recommneded usage
+  * Recommended usage
   * <a data-scroll-trigger="area">Trigger</a>
   * <div data-scroll-target="area">Target</div>
+  *
   */
-
 
 ;(function($) {
 
