@@ -16,7 +16,7 @@
   var trigger = $('[data-scroll-trigger]');
   
   trigger.on('click', function(e) {
-    e.preventDefault()
+    e.preventDefault();
     
     var id = $(this).data('scroll-trigger');
     
