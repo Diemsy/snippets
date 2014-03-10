@@ -1,14 +1,24 @@
+$module-prefix: '.module';
+
 /**
   * Module Core
   * -------------------------
   */
 
-.module {
-  // module styles
-  &-header { }
-  &-title { }
-  &-body { }
-  &-footer { }
+#{$module-prefix} {
+  // do work
+  &-header {
+    // do work
+  }
+  &-title {
+    // do work
+  }
+  &-body {
+    // do work
+  }
+  &-footer {
+    // do work
+  }
 } // .module
 
 /**
@@ -16,13 +26,20 @@
   * -------------------------
   */
 
-.module--modifier {
-  .module {
-    // module styles
-    &-header { }
-    &-title { }
-    &-body { }
-    &-footer { }
+#{$module-prefix}--modifier {
+  #{$module-prefix} {
+    &-header {
+      // do work
+    }
+    &-title {
+      // do work
+    }
+    &-body {
+      // do work
+    }
+    &-footer {
+      // do work
+    }
   } // .module
 } // .module--modifier
 
@@ -37,6 +54,7 @@
 .module-body {}
 .module-footer {}
 
+.module--modifier {}
 .module--modifier .module {}
 .module--modifier .module-header {}
 .module--modifier .module-title {}
