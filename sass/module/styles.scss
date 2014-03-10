@@ -1,20 +1,44 @@
-// Requires Sass 3.3
-@mixin module( $name ) {
-  .#{$name} {
-    @at-root {
-      @content;
-    }
-  }
-}
+/**
+  * Module Core
+  * -------------------------
+  */
 
-@include module( 'class' ) {
-  #{&}-header {
-    // ...do work
-  }
-  #{&}-title {
-    // ...do work
-  }
-  #{&}-body {
-    // ...do work
-  }
+.module {
+  // module styles
+  &-header { }
+  &-title { }
+  &-body { }
+  &-footer { }
 } // .module
+
+/**
+  * Module Modifier
+  * -------------------------
+  */
+
+.module--modifier {
+  .module {
+    // module styles
+    &-header { }
+    &-title { }
+    &-body { }
+    &-footer { }
+  } // .module
+} // .module--modifier
+
+/**
+  * CSS Output
+  * -------------------------
+  */
+s
+.module {}
+.module-header {}
+.module-title {}
+.module-body {}
+.module-footer {}
+
+.module--modifier .module {}
+.module--modifier .module-header {}
+.module--modifier .module-title {}
+.module--modifier .module-body {}
+.module--modifier .module-footer {}
