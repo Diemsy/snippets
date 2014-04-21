@@ -9,7 +9,7 @@ if (typeof(Storage) !== 'undefined') {
   // No luck
 }
 
-// Set local storage items
+// Set local storage item
 localStorage.firstName = 'Kris';
 
 // OR
@@ -21,10 +21,10 @@ var name = localStorage.firstName;
 // OR
 var name = localStorage.getItem('firstName')
 
-// Removed an item
+// Removed local storage item
 localStorage.removeItem('firstName');
 
-// Clear everything
+// Clear local storage
 localStorage.clear();
 
 // Person object
@@ -33,8 +33,8 @@ var person = {
   lastName: 'Olszewski'
 }
 
-// Set object as a string in local storage
+// Set object as JSON string
 localStorage.person = JSON.stringify(person);
 
-// Get object by parsing from local storage
+// Get object from JSON string
 var person = JSON.parse(localStorage.person);
