@@ -10,12 +10,12 @@ var Module = (function (api, window, document, undefined) {
     return counter;
   };
   
-  api.increment = function () {
-    return ( counter += 1 );
+  api.increment = function (value) {
+    return ( counter += value || 1 );
   };
   
-  api.decrement = function () {
-    return ( counter -= 1 );
+  api.decrement = function (value) {
+    return ( counter -= value || 1 );
   };
   
   api.set = function (value) {
