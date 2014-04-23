@@ -1,20 +1,29 @@
 //
+// Media Query breakpoint variables
+// --------------------------------------------------
+
+$mq-small: 420px;
+$mq-medium: 760px;
+$mq-regular: 980px;
+$mq-large: 1140px;
+
+//
 // Media Query - above breakpoint
 // --------------------------------------------------
 
 @mixin mq-above( $breakpoint ) {
   @if $breakpoint == small  {
-    @media only screen and (min-width: 480px) { @content; }
+    @media only screen and (min-width: $mq-small) { @content; }
   }
   @else if $breakpoint == medium  {
-    @media only screen and (min-width: 768px) { @content; }
+    @media only screen and (min-width: $mq-medium) { @content; }
   }
   @else if $breakpoint == regular  {
-    @media only screen and (min-width: 980px) { @content; }
-    .ie8 & { @content; } // IE8 fallback
+    @media only screen and (min-width: $mq-regular) { @content; }
+    .ie8 & { @content; }
   }
   @else if $breakpoint == large  {
-    @media only screen and (min-width: 1140px) { @content; }
+    @media only screen and (min-width: $mq-large) { @content; }
   }
 }
 
@@ -24,13 +33,13 @@
 
 @mixin mq-between( $breakpoint ) {
   @if $breakpoint == small-medium  {
-    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+    @media only screen and (min-width: $mq-small) and (max-width: $mq-medium - 1) { @content; }
   }
   @else if $breakpoint == medium-regular  {
-    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+    @media only screen and (min-width: $mq-medium) and (max-width: $mq-regular - 1) { @content; }
   }
   @else if $breakpoint == regular-large  {
-    @media only screen and (min-width: 980px) and (max-width: 1139px) { @content; }
+    @media only screen and (min-width: $mq-regular) and (max-width: $mq-large - 1) { @content; }
   }
 }
 
