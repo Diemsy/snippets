@@ -153,7 +153,7 @@
 <!--- Set function --->
 <cffunction name='myFunction' output='{true|false}' access='{public|private|remote}' returnType='{void|:type}'>
   <!--- Function argument --->
-  <cfargument name='myArgument' type='{:type}' required='{true|false}' default='{default}'>
+  <cfargument name='myArgument' type='{:type}' required='{true|false}' default='{:default}'>
   
   <!--- Do something --->
   <cfset myVar = true>
@@ -173,26 +173,29 @@
 <!--- Set component --->
 <cfcomponent>
   <!--- Set public scope --->
-  <cfset this.myVar = 'Kris'>
+  <cfset this.master = 'Yoda'>
 
   <!--- Set private scope --->
-  <cfset variables.myVar = 'Kris'>
+  <cfset variables.padawan = 'Kris'>
   
   <!--- Set public function --->
-  <cffunction name='getUser' output='false' access='public' returnType='struct'>
-    <cfargument name='userId' type='integer' required='true'>
+  <cffunction name='getJedi' output='false' access='public' returnType='struct'>
+    <cfargument name='jediId' type='integer' required='true'>
     
-    <!--- Do something to get user data usinf #arguments.userId# --->
-    <cfset user = {}>
+    <!--- Do something to get jedi data using #arguments.jediId# --->
+    <cfset jedi = {}>
     
-    <cfreturn user>
+    <cfreturn jedi>
   </cffunction>
 </cfcomponent>
 
-<!--- Create an instance of component (Users.cfc) --->
-<cfset Users = CreateObject('Component', 'path.to.component.Users')>
+<!--- Create an instance of component (Jedi.cfc) --->
+<cfset Jedi = CreateObject('Component', 'path.to.component.Jedi')>
 
-<!--- Access component method --->
-<cfset kris = Users.getUser(id=28)>
+<!--- Access public variable --->
+<cfset master = Jedi.master>
+
+<!--- Access method --->
+<cfset jedi = Jedi.getJedi(id=7)>
 
 ````
