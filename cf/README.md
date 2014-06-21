@@ -2,7 +2,7 @@
 ---
 
 ## Variables
-````coldfusion
+```coldfusion
 <!--- Set variable --->
 <cfset myVar = 'Kris'>
 
@@ -11,12 +11,12 @@
 
 <!--- Variable dump --->
 <cfdump var = '#myVar#'>
-````
+```
 
 ---
 
 ## Arrays
-````coldfusion
+```coldfusion
 <!--- Set array --->
 <cfset myArray = []>
 
@@ -33,12 +33,12 @@
 <cfloop array='#myArray' item='item'>
   #item#
 </cfloop>
-````
+```
 
 ---
 
 ## Structures
-````coldfusion
+```coldfusion
 <!--- Set struct --->
 <cfset myStruct = {}>
 
@@ -57,12 +57,12 @@
 <cfloop collection='#myStruct#' item='key'>
  #key#: #myStruct[key]#
 </cfloop>
-````
+```
 
 ---
 
 ## Switch
-````coldfusion
+```coldfusion
 <cfset user = 'Kris'>
 
 <cfswitch expression='#user#'>
@@ -79,12 +79,12 @@
   
   </cfdefaultcase>
 </cfswitch>
-````
+```
 
 ---
 
 ## Decision making - if/elseif/else
-````coldfusion
+```coldfusion
 <!--- Decision making
   
   # Equal:                is, equal, eq
@@ -103,12 +103,12 @@
 <cfelseif myVar eq 'something-else'>
 
 <cfelse>
-````
+```
 
 ---
 
 ## Loops
-````coldfusion
+```coldfusion
 <!--- Loop --->
 <cfloop from='1' to='10' index='i'>
   #i#
@@ -127,12 +127,12 @@
   </cfif>
   #i#
 </cfloop>
-````
+```
 
 ---
 
 ## JSON
-````coldfusion
+```coldfusion
 <!--- JSON --->
 <cfset myStruct = {
   'name': 'Kris',
@@ -144,12 +144,12 @@
 <cfset fromJSON = deserializeJSON(toJSON)>
 
 <cfdump var = '#isJson(toJSON)#'>
-````
+```
 
 ---
 
 ## Functions
-````coldfusion
+```coldfusion
 <!--- Set function --->
 <cffunction name='myFunction' output='{true|false}' access='{public|private|remote}' returnType='{void|:type}'>
   <!--- Function argument --->
@@ -164,12 +164,12 @@
 
 <!--- Get function --->
 <cfset myVar = myFunction('myArgument')>
-````
+```
 
 ---
 
 ## Components
-````coldfusion
+```coldfusion
 <!--- Set component --->
 <cfcomponent>
   <!--- Set public scope --->
@@ -198,4 +198,4 @@
 <!--- Access method --->
 <cfset jedi = Jedi.getJedi(id=7)>
 
-````
+```
