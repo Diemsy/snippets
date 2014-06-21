@@ -4,13 +4,13 @@
 ## Variables
 ```coldfusion
 <!--- Set variable --->
-<cfset myVar = 'Kris'>
+<cfset padawan = 'Kris'>
 
 <!--- Variable output --->
-<cfoutput>#myVar#</cfoutput>
+<cfoutput>#padawan#</cfoutput>
 
 <!--- Variable dump --->
-<cfdump var = '#myVar#'>
+<cfdump var = '#padawan#'>
 ```
 
 ---
@@ -18,20 +18,20 @@
 ## Arrays
 ```coldfusion
 <!--- Set array --->
-<cfset myArray = []>
+<cfset padawans = []>
 
 <!--- Append item to array --->
-<cfset ArrayAppend(myArray, 'Kris')>
+<cfset ArrayAppend(padawans, 'Kris')>
 
 <!--- Delete item from array --->
-<cfset ArrayDelete(myArray, 'Kris')>
+<cfset ArrayDelete(padawans, 'Kris')>
 
 <!--- Delete item from array by position --->
-<cfset ArrayDeleteAt(myArray, 1)>
+<cfset ArrayDeleteAt(padawans, 1)>
 
 <!--- Loop over array --->
-<cfloop array='#myArray' item='item'>
-  #item#
+<cfloop array='#padawans' item='padawan'>
+  #padawan#
 </cfloop>
 ```
 [Array Functions](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec09f0b-8000.html)
@@ -41,22 +41,22 @@
 ## Structures
 ```coldfusion
 <!--- Set struct --->
-<cfset myStruct = {}>
+<cfset padawan = {}>
 
 <!-- Append item to struct using bracket notation --->
-<cfset myStruct['name'] = 'Kris'>
+<cfset padawan['name'] = 'Kris'>
 
 <!--- Append item to struct using dot notation --->
-<cfset myStruct.name = 'Kris'>
+<cfset padawan.name = 'Kris'>
 
 <!--- Set struct and append content in single statement --->
-<cfset myStruct = {
+<cfset padawan = {
   'name': 'Kris'
 }>
 
 <!--- Loop over a struct --->
-<cfloop collection='#myStruct#' item='key'>
- #key#: #myStruct[key]#
+<cfloop collection='#padawan#' item='key'>
+ #key#: #padawan[key]#
 </cfloop>
 ```
 [Structure Functions](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec22c24-6210.html)
@@ -65,9 +65,9 @@
 
 ## Switch
 ```coldfusion
-<cfset user = 'Kris'>
+<cfset padawan = 'Kris'>
 
-<cfswitch expression='#user#'>
+<cfswitch expression='#padawan#'>
   <cfcase value='Kris'>
   
   </cfcase>
@@ -137,13 +137,13 @@
 ## JSON
 ```coldfusion
 <!--- JSON --->
-<cfset myStruct = {
+<cfset padawan = {
   'name': 'Kris',
   'city': 'Charlotte',
   'state': 'NC'
 }>
 
-<cfset toJSON = serializeJSON(myStruct)>
+<cfset toJSON = serializeJSON(padawan)>
 <cfset fromJSON = deserializeJSON(toJSON)>
 
 <cfdump var = '#isJson(toJSON)#'>
