@@ -80,3 +80,68 @@
   </cfdefaultcase>
 </cfswitch>
 ````
+
+---
+
+## Decision making - if/elseif/else
+````coldfusion
+<!--- Decision making
+  
+  # Equal:                is, equal, eq
+  # Not equal:            is not, not equal, neq
+  # Greater than:         gt, greater than
+  # Greater than equal:   gte
+  # Less than:            lt, less than
+  # Less than equal:      lte
+
+  # And:                  and
+  # Or:                   or
+
+--->
+<cfif myVar eq 'something'>
+
+<cfelseif myVar eq 'something-else'>
+
+<cfelse>
+````
+
+---
+
+## Loops
+````coldfusion
+<!--- Loop --->
+<cfloop from='1' to='10' index='i'>
+  #i#
+</cfloop>
+
+<!--- Loop break --->
+<cfloop from='1' to='10' index='i'>
+  #i#
+  <cfbreak>
+</cfloop>
+
+<!--- Loop skip --->
+<cfloop from='1' to='10' index='i'>
+  <cfif i mod 2 eq 0>
+    <cfcontinue>
+  </cfif>
+  #i#
+</cfloop>
+````
+
+---
+
+## JSON
+````coldfusion
+<!--- JSON --->
+<cfset myStruct = {
+  'name': 'Kris',
+  'city': 'Charlotte',
+  'state': 'NC'
+}>
+
+<cfset toJSON = serializeJSON(myStruct)>
+<cfset fromJSON = deserializeJSON(toJSON)>
+
+<cfdump var = '#isJson(toJSON)#'>
+````
