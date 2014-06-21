@@ -145,3 +145,54 @@
 
 <cfdump var = '#isJson(toJSON)#'>
 ````
+
+---
+
+## Functions
+````coldfusion
+<!--- Set function --->
+<cffunction name='myFunction' output='{true|false}' access='{public|private|remote}' returnType='{void|:type}'>
+  <!--- Function argument --->
+  <cfargument name='myArgument' type='{:type}' required='{true|false}' default='{default}'>
+  
+  <!--- Do something --->
+  <cfset myVar = true>
+  
+  <!--- Function return --->
+  <cfreturn myVar>
+</cffunction>
+
+<!--- Get function --->
+<cfset myVar = myFunction('myArgument')>
+````
+
+---
+
+## Components
+````coldfusion
+<!--- Set component --->
+<cfcomponent>
+  <!--- Set public scope --->
+  <cfset this.myVar = 'Kris'>
+
+  <!--- Set private scope --->
+  <cfset variables.myVar = 'Kris'>
+  
+  <!--- Set public function --->
+  <cffunction name='getUser' output='false' access='public' returnType='struct'>
+    <cfargument name='userId' type='integer' required='true'>
+    
+    <!--- Do something to get user data usinf #arguments.userId# --->
+    <cfset user = {}>
+    
+    <cfreturn user>
+  </cffunction>
+</cfcomponent>
+
+<!--- Create an instance of component (Users.cfc) --->
+<cfset Users = CreateObject('Component', 'path.to.component.Users')>
+
+<!--- Access component method --->
+<cfset kris = Users.getUser(id=28)>
+
+````
