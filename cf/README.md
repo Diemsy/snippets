@@ -34,6 +34,7 @@
   #item#
 </cfloop>
 ```
+[Array Functions](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec09f0b-8000.html)
 
 ---
 
@@ -58,6 +59,7 @@
  #key#: #myStruct[key]#
 </cfloop>
 ```
+[Structure Functions](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec22c24-6210.html)
 
 ---
 
@@ -104,6 +106,7 @@
 
 <cfelse>
 ```
+[Operator Types](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec09d55-7ffc.html)
 
 ---
 
