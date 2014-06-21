@@ -199,6 +199,6 @@
 <cfset master = Jedi.master>
 
 <!--- Access method --->
-<cfset jedi = Jedi.getJedi(id=7)>
+<cfset jedi = Jedi.getJedi(7)>
 
 ```
