@@ -30,7 +30,7 @@
 <cfset ArrayDeleteAt(padawans, 1)>
 
 <!--- Loop over array --->
-<cfloop array='#padawans' item='padawan'>
+<cfloop array='#padawans#' item='padawan'>
   #padawan#
 </cfloop>
 ```
