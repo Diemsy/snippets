@@ -4,7 +4,7 @@
 * [Arrays](#arrays)
 * [Structures](#structures)
 * [Switch Case](#switch-case)
-* [Decision making - if/elseif/else](#decision-making)
+* [Comparison and Logical Operators](#comparison-and-logical-operators)
 * [Loops](#loops)
 * [JSON](#json)
 * [Functions](#functions)
@@ -100,9 +100,9 @@
 
 ---
 
-## <a name="decision-making">Decision making - if/elseif/else</a>
+## <a name="comparison-and-logical-operators">Comparison and Logical Operators</a>
 ```coldfusion
-<!--- Decision making
+<!--- Comparison and Logical Operators
   
   # Equal:                is, equal, eq
   # Not equal:            is not, not equal, neq
