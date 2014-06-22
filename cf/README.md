@@ -1,5 +1,9 @@
 # ColdFusion Syntax
 
+ColdFusion syntax reference for developers who are new to the language or just need a quick refresh. 
+
+## Table of Contents
+
 * [Variables](#variables)
 * [Arrays](#arrays)
 * [Structures](#structures)
