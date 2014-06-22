@@ -258,9 +258,9 @@
 
 ```coldfusion
 <!--- Simple stored procedure --->
-<cfstoredproc procedure="{:myStoredProcedure}" datasource="{:datasource}">
+<cfstoredproc procedure="myStoredProcedure" datasource="{:datasource}">
   <cfprocparam type="{in|out|inout}" cfsqltype="{:cf_sql_type}" value="{:value}">
-  <cfprocresult name="{:myStoredProcedureResult}">
+  <cfprocresult name="myStoredProcedureResults">
 </cfstoredproc>
 ```
 
