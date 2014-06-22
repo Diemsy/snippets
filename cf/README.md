@@ -1,5 +1,4 @@
 # ColdFusion Syntax
----
 
 * [Variables](#variables)
 * [Arrays](#arrays)
