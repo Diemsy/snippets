@@ -104,15 +104,15 @@
 ```coldfusion
 <!--- Comparison and Logical Operators
   
-  # Equal:                is, equal, eq
-  # Not equal:            is not, not equal, neq
-  # Greater than:         gt, greater than
-  # Greater than equal:   gte
-  # Less than:            lt, less than
-  # Less than equal:      lte
+  # Equal:                    is, equal, eq
+  # Not equal:                is not, not equal, neq
+  # Greater than:             gt, greater than
+  # Greater than or equal:    gte
+  # Less than:                lt, less than
+  # Less than or equal:       lte
 
-  # And:                  and
-  # Or:                   or
+  # And:                      and
+  # Or:                       or
 
 --->
 <cfif myVar eq "something">
