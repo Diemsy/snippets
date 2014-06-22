@@ -1,7 +1,20 @@
 # ColdFusion Syntax
 ---
 
-## Variables
+* [Variables](#variables)
+* [Arrays](#arrays)
+* [Structures](#structures)
+* [Switch Case](#switch-case)
+* [Decision making - if/elseif/else](#decision-making)
+* [Loops](#loops)
+* [JSON](#json)
+* [Functions](#functions)
+* [Components](#components)
+* [Database Queries](#database-queries)
+
+---
+
+## <a name="variables">Variables</a>
 ```coldfusion
 <!--- Set variable --->
 <cfset padawan = 'Kris'>
@@ -15,7 +28,7 @@
 
 ---
 
-## Arrays
+## <a name="arrays">Arrays</a>
 ```coldfusion
 <!--- Set array --->
 <cfset padawans = []>
@@ -34,11 +47,11 @@
   #padawan#
 </cfloop>
 ```
-[Array Functions](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec09f0b-8000.html)
+[Array Functions](http://help.adobe.com/en_US/ColdFusion/10.0/Developing/WSc3ff6d0ea77859461172e0811cbec09f0b-8000.html)
 
 ---
 
-## Structures
+## <a name="structures">Structures</a>
 ```coldfusion
 <!--- Set struct --->
 <cfset padawan = {}>
@@ -59,11 +72,11 @@
  #key#: #padawan[key]#
 </cfloop>
 ```
-[Structure Functions](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec22c24-6210.html)
+[Structure Functions](http://help.adobe.com/en_US/ColdFusion/10.0/Developing/WSc3ff6d0ea77859461172e0811cbec22c24-6210.html)
 
 ---
 
-## Switch
+## <a name="switch-case">Switch Case</a>
 ```coldfusion
 <cfset padawan = 'Kris'>
 
@@ -85,7 +98,7 @@
 
 ---
 
-## Decision making - if/elseif/else
+## <a name="decision-making">Decision making - if/elseif/else</a>
 ```coldfusion
 <!--- Decision making
   
@@ -106,11 +119,11 @@
 
 <cfelse>
 ```
-[Operator Types](http://help.adobe.com/en_US/ColdFusion/9.0/Developing/WSc3ff6d0ea77859461172e0811cbec09d55-7ffc.html)
+[Operator Types](http://help.adobe.com/en_US/ColdFusion/10.0/Developing/WSc3ff6d0ea77859461172e0811cbec09d55-7ffc.html)
 
 ---
 
-## Loops
+## <a name="loops">Loops</a>
 ```coldfusion
 <!--- Loop --->
 <cfloop from='1' to='10' index='i'>
@@ -134,7 +147,7 @@
 
 ---
 
-## JSON
+## <a name="json">JSON</a>
 ```coldfusion
 <!--- JSON --->
 <cfset padawan = {
@@ -151,7 +164,7 @@
 
 ---
 
-## Functions
+## <a name="functions">Functions</a>
 ```coldfusion
 <!--- Set function --->
 <cffunction name='myFunction' output='{true|false}' access='{public|private|remote}' returnType='{void|:type}'>
@@ -171,7 +184,7 @@
 
 ---
 
-## Components
+## <a name="components">Components</a>
 ```coldfusion
 <!--- Set component --->
 <cfcomponent>
@@ -204,7 +217,7 @@
 
 ---
 
-## Database Queries
+## <a name="database-queries">Database Queries</a>
 
 ```coldfusion
 <!--- Get data from database --->
