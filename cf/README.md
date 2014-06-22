@@ -267,7 +267,6 @@
     <!--- Handle another exception type --->
   </cfcatch>
 </cftry>
-</cftry>
 
 <!--- Throw own error --->
 <cftry>
