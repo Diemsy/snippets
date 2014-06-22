@@ -10,6 +10,7 @@
 * [Functions](#functions)
 * [Components](#components)
 * [Database Queries](#database-queries)
+* [Stored Procedures](#stored-procedures)
 * [Catch/Try](#catch-try)
 
 ---
@@ -221,7 +222,7 @@
 
 ```coldfusion
 <!--- Get data from database --->
-<cfquery name="myQuery" datasource="{:datasource}"> 
+<cfquery name='myQuery' datasource='{:datasource}'> 
     SELECT {:column-name} FROM {:table-name} 
 </cfquery>
 
@@ -239,15 +240,27 @@
 </cfloop>
 
 <!--- Query caching --->
-<cfquery name="myQuery" datasource="{:datasource}" cachedwithin='#createTimespan(0,1,0,0)#'> 
+<cfquery name='myQuery' datasource='{:datasource}' cachedwithin='#createTimespan(0,1,0,0)#'> 
     SELECT {:column-name} FROM {:table-name} 
 </cfquery>
 
 <!--- Query with query param --->
-<cfquery name="myQuery" datasource="{:datasource}"> 
+<cfquery name='myQuery' datasource='{:datasource}'> 
     SELECT {:column-name} FROM {:table-name}
-    WHERE {:column-name} = <cfqueryparam value="{:value}" cfsqltype='{:cf_sql_type}'>
+    WHERE {:column-name} = <cfqueryparam value='{:value}' cfsqltype='{:cf_sql_type}'>
 </cfquery>
+```
+
+---
+
+## <a name="stored-procedures">Stored Procedures</a>
+
+```coldfusion
+<!--- Simple stored procedure --->
+<cfstoredproc procedure='{:myStoredProcedure}' datasource='{:datasource}'>
+  <cfprocparam type='{in|out|inout}' cfsqltype='{:cf_sql_type}' value='{:value}'>
+  <cfprocresult name='{:myStoredProcedureResult}'>
+</cfstoredproc>
 ```
 
 ---
