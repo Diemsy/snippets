@@ -200,5 +200,39 @@
 
 <!--- Access method --->
 <cfset jedi = Jedi.getJedi(7)>
+```
 
+---
+
+## Database Queries
+
+```coldfusion
+<!--- Get data from database --->
+<cfquery name="myQuery" datasource="{:datasource}"> 
+    SELECT {:column-name} FROM {:table-name} 
+</cfquery>
+
+<!--- Dump results --->
+<cfdump var = '#myQuery#'>
+
+<!--- Output results --->
+<cfoutput query='#myQuery#'>
+  #{:column-name}#
+</cfoutput>
+
+<!--- Loop over results --->
+<cfloop query='#myQuery#'>
+  #{:column-name}#
+</cfloop>
+
+<!--- Query caching --->
+<cfquery name="myQuery" datasource="{:datasource}" cachedwithin='#createTimespan(0,1,0,0)#'> 
+    SELECT {:column-name} FROM {:table-name} 
+</cfquery>
+
+<!--- Query with query param --->
+<cfquery name="myQuery" datasource="{:datasource}"> 
+    SELECT {:column-name} FROM {:table-name}
+    WHERE {:column-name} = <cfqueryparam value="{:value}" cfsqltype='{:cf_sql_type}'>
+</cfquery>
 ```
