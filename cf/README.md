@@ -10,6 +10,7 @@
 * [Functions](#functions)
 * [Components](#components)
 * [Database Queries](#database-queries)
+* [Catch/Try](#catch-try)
 
 ---
 
@@ -170,7 +171,7 @@
   <!--- Function argument --->
   <cfargument name='myArgument' type='{:type}' required='{true|false}' default='{:default}'>
   
-  <!--- Do something --->
+  <!--- Do work son! --->
   <cfset myVar = true>
   
   <!--- Function return --->
@@ -247,4 +248,47 @@
     SELECT {:column-name} FROM {:table-name}
     WHERE {:column-name} = <cfqueryparam value="{:value}" cfsqltype='{:cf_sql_type}'>
 </cfquery>
+```
+
+---
+
+## <a name="catch-try">Catch/Try</a>
+
+```coldfusion
+<!--- Try and catch exceptions --->
+<cftry>
+
+  <!--- Do work son! --->
+  
+  <cfcatch type='{:type}'>
+    <!--- Handle exception --->
+  </cfcatch>
+  <cfcatch type='{:type}'>
+    <!--- Handle another exception type --->
+  </cfcatch>
+</cftry>
+</cftry>
+
+<!--- Throw own error --->
+<cftry>
+
+  <!--- Do work son! --->
+  
+  <cfcatch type='{:type}'>
+    <cfthrow message='{:message}' type='{:type}' detail='{:detail}'>
+  </cfcatch>
+</cftry>
+
+<!--- Use cffinally to always execute something --->
+<cftry>
+
+  <!--- Do work son! --->
+  
+  <cfcatch type='{:type}'>
+    <!--- Handle exception --->
+  </cfcatch>
+  <cffinally>
+    <!--- Always execute --->
+  </cffinally>
+</cftry>
 ```
