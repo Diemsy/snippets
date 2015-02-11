@@ -1,73 +1,104 @@
 //
-// Button variables
+// Variables
 // --------------------------------------------------
 
-// Typography
-// -------------------------
-$button-font-size-small: 11px;
-$button-font-size-default: 13px;
-$button-font-size-large: 15px;
-$button-font-size-huge: 18px;
+$button-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$button-disabled-opacity: .65;
+$button-group-offset: 30px;
+$button-base: (
+  font-size         : 14px,
+  line-height       : 20px,
+  height            : 34px,
+  padding           : 6px 12px,
+  border-radius     : 3px,
+  text              : #fff,
+  background        : #656D78,
+  border            : #434A54,
+  active-text       : #fff,
+  active-background : #434A54,
+  active-border     : #434A54
+);
 
-$button-line-height-small: 14px;
-$button-line-height-default: 20px;
-$button-line-height-large: 20px;
-$button-line-height-huge: 22px;
+$button-sizes: (
+  small: (
+    font-size     : 12px,
+    line-height   : 18px,
+    height        : 28px,
+    padding       : 4px 8px,
+    border-radius : 2px
+  ),
+  large: (
+    font-size     : 16px,
+    line-height   : 22px,
+    height        : 40px,
+    padding       : 8px 16px,
+    border-radius : 4px
+  )
+);
 
-// Shape
-// -------------------------
-$button-border-radius-small: 2px;
-$button-border-radius-default: 3px;
-$button-border-radius-large: 4px;
-$button-border-radius-huge: 5px;
-
-// Sizing
-// -------------------------
-$button-padding-small: 4px 8px;
-$button-padding-default: 6px 12px;
-$button-padding-large: 10px 20px;
-$button-padding-huge: 11px 24px;
-
-$button-block-spacing: 10px;
-
-// Link
-// -------------------------
-$button-link-color: #5d9cec;
-$button-link-color-hover: #4a89dc;
-$button-link-color-disabled: #aab2bd;
-
-// Default action
-// -------------------------
-$button-color-default: #434a54;
-$button-border-color-default: #656d78;
-$button-background-color-default: #fff;
-
-// Primary action
-// -------------------------
-$button-color-primary: #fff;
-$button-border-color-primary: #967adc;
-$button-background-color-primary: #ac92ec;
-
-// Danger action
-// -------------------------
-$button-color-danger: #fff;
-$button-border-color-danger: #da4453;
-$button-background-color-danger: #ed5565;
-
-// Warning action
-// -------------------------
-$button-color-warning: #fff;
-$button-border-color-warning: #f6bb42;
-$button-background-color-warning: #ffce54;
-
-// Success action
-// -------------------------
-$button-color-success: #fff;
-$button-border-color-success: #37bc9b;
-$button-background-color-success: #48cfad;
-
-// Info action
-// -------------------------
-$button-color-info: #fff;
-$button-border-color-info: #3bafda;
-$button-background-color-info: #4fc1e9;
+$button-variations: (
+  primary: (
+    text              : #fff,
+    background        : #AC92EC,
+    border            : #967ADC,
+    active-text       : #fff,
+    active-background : #967ADC,
+    active-border     : #967ADC
+  ),
+  secondary: (
+    text              : #fff,
+    background        : #5D9CEC,
+    border            : #4A89DC,
+    active-text       : #fff,
+    active-background : #4A89DC,
+    active-border     : #4A89DC
+  ),
+  outline: (
+    text              : #434A54,
+    background        : transparent,
+    border            : #434A54,
+    active-text       : #fff,
+    active-background : #434A54,
+    active-border     : #434A54
+  ),
+  link: (
+    text              : #5D9CEC,
+    background        : transparent,
+    border            : transparent,
+    active-text       : #4A89DC,
+    active-background : transparent,
+    active-border     : transparent
+  ),
+  success: (
+    text              : #fff,
+    background        : #A0D468,
+    border            : #8CC152,
+    active-text       : #fff,
+    active-background : #8CC152,
+    active-border     : #8CC152
+  ),
+  info: (
+    text              : #fff,
+    background        : #4FC1E9,
+    border            : #3BAFDA,
+    active-text       : #fff,
+    active-background : #3BAFDA,
+    active-border     : #3BAFDA
+  ),
+  warning: (
+    text              : #fff,
+    background        : #FFCE54,
+    border            : #F6BB42,
+    active-text       : #fff,
+    active-background : #F6BB42,
+    active-border     : #F6BB42
+  ),
+  error: (
+    text              : #fff,
+    background        : #ED5565,
+    border            : #DA4453,
+    active-text       : #fff,
+    active-background : #DA4453,
+    active-border     : #DA4453
+  )
+);

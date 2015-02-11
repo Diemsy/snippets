@@ -1,41 +1,30 @@
-//
-// Button mixins
-// --------------------------------------------------
+@mixin generate-button-variation-modifiers() {
 
-// Action
-// -------------------------
-@mixin button-action($color, $border-color, $background-color) {
-  border-color: $border-color;
-  background-color: $background-color;
-  color: $color;
-  &:hover,
-  &:focus {
-    background-color: lighten($background-color, 6%);
-  }
-  &:active,
-  &.is-active {
-    border-color: darken($border-color, 8%);
-    background-color: darken($background-color, 5%);
-  }
-  &[disabled],
-  &.is-disabled,
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.is-active {
-      border-color: $border-color;
-      background-color: $background-color;
+  @each $variation, $values in $button-variations {
+    .Button--#{$variation} {
+      background-color: get-button-variation($variation, background);
+      border-color: get-button-variation($variation, border);
+      color: get-button-variation($variation, text);
+      &:hover {
+        background-color: get-button-variation($variation, active-background);
+        border-color: get-button-variation($variation, active-border);
+        color: get-button-variation($variation, active-text);
+      }
     }
   }
+
 }
 
-// Sizing
-// -------------------------
-@mixin button-size($font-size, $line-height, $padding, $border-radius) {
-  padding: $padding;
-  border-radius: $border-radius;
-  font-size: $font-size;
-  line-height: $line-height;
+@mixin generate-button-size-modifiers() {
+
+  @each $size, $values in $button-sizes {
+    .Button--#{$size} {
+      font-size: get-button-size($size, font-size);
+      line-height: get-button-size($size, line-height);
+      height: get-button-size($size, height);
+      padding: get-button-size($size, padding);
+      border-radius: get-button-size($size, border-radius);
+    }
+  }
+
 }
