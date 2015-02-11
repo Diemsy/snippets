@@ -1,0 +1,53 @@
+@import "_variables";
+@import "_functions";
+@import "_mixins";
+
+.under-width {
+  @include under(small) {
+    font-size: 14px;
+  }
+}
+
+.between-width {
+  @include between(small, medium) {
+    font-size: 14px;
+  }
+}
+
+.above-width {
+  @include above(large) {
+    font-size: 14px;
+  }
+}
+
+.under-height {
+  @include v-under(small) {
+    font-size: 14px;
+  }
+}
+
+.between-height {
+  @include v-between(small, medium) {
+    font-size: 14px;
+  }
+}
+
+.above-height {
+  @include v-above(large) {
+    font-size: 14px;
+  }
+}
+
+.mixed-queries {
+  @include above(medium) {
+    @include v-under(small) {
+      font-size: 12px;
+    }
+    @include hd() {
+      background-image: url("image@2x.png");
+    }
+    @include uhd() {
+      background-image: url("image@3x.png");
+    }
+  }
+}

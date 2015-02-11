@@ -1,0 +1,11 @@
+@function get-breakpoint($orientation, $breakpoint) {
+
+  $map: map-get($breakpoints, $orientation);
+
+  @if not map-has-key($map, $breakpoint) {
+    @error "`#{$breakpoint}` key doesn't exist in `#{$orientation}` map.";
+    @return false;
+  }
+
+  @return map-get($map, $breakpoint);
+}

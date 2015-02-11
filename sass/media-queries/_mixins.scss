@@ -1,94 +1,55 @@
-//
-// Media Query - breakpoint variables
-// --------------------------------------------------
-
-$mq-small: 420px;
-$mq-medium: 760px;
-$mq-regular: 980px;
-$mq-large: 1140px;
-
-//
-// Media Query - above breakpoint
-// --------------------------------------------------
-
-@mixin mq-above( $breakpoint ) {
-  @if $breakpoint == small  {
-    @media only screen and (min-width: $mq-small) { @content; }
-  }
-  @else if $breakpoint == medium  {
-    @media only screen and (min-width: $mq-medium) { @content; }
-  }
-  @else if $breakpoint == regular  {
-    @media only screen and (min-width: $mq-regular) { @content; }
-    .ie8 & { @content; }
-  }
-  @else if $breakpoint == large  {
-    @media only screen and (min-width: $mq-large) { @content; }
+@mixin under($breakpoint) {
+  $max-width: (get-breakpoint("horizontal", $breakpoint) - 1);
+  @media screen and (max-width: $max-width) {
+    @content;
   }
 }
 
-//
-// Media Query - between breakpoints
-// --------------------------------------------------
-
-@mixin mq-between( $breakpoint ) {
-  @if $breakpoint == small-medium  {
-    @media only screen and (min-width: $mq-small) and (max-width: $mq-medium - 1) { @content; }
-  }
-  @else if $breakpoint == medium-regular  {
-    @media only screen and (min-width: $mq-medium) and (max-width: $mq-regular - 1) { @content; }
-  }
-  @else if $breakpoint == regular-large  {
-    @media only screen and (min-width: $mq-regular) and (max-width: $mq-large - 1) { @content; }
+@mixin between($min-breakpoint, $max-breakpoint) {
+  $min-width: get-breakpoint("horizontal", $min-breakpoint);
+  $max-width: (get-breakpoint("horizontal", $max-breakpoint) - 1);
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+   @content;
   }
 }
 
-/**
-  * Module
-  * -------------------------
-  *
-  */
-  
-.module {
-  
-  @include mq-above( small ) {
-  
-  } // small
-  
-  @include mq-between( small-medium ) {
-  
-  } // small-medium
-  
-  @include mq-above( medium ) {
-  
-  } // medium
-  
-  @include mq-between( medium-regular ) {
-  
-  } // medium-regular
-  
-  @include mq-above( regular ) {
-  
-  } // regular
-  
-  @include mq-between( regular-large ) {
-  
-  } // regular-large
-  
-  @include mq-above( large ) {
-  
-  } // large
-  
-  .ie & {
-    
-  } // .ie &
-  
-  .ie8 & {
-    
-  } // .ie8 &
-  
-  .ie9 & {
-    
-  } // .ie9 &
-  
-} // .module
+@mixin above($breakpoint) {
+  $min-width: get-breakpoint("horizontal", $breakpoint);
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin v-under($breakpoint) {
+  $max-height: (get-breakpoint("vertical", $breakpoint) - 1);
+  @media screen and (max-height: $max-height) {
+    @content;
+  }
+}
+
+@mixin v-between($min-breakpoint, $max-breakpoint) {
+  $min-height: get-breakpoint("vertical", $min-breakpoint);
+  $max-height: (get-breakpoint("vertical", $max-breakpoint) - 1);
+  @media screen and (min-height: $min-height) and (max-height: $max-height) {
+   @content;
+  }
+}
+
+@mixin v-above($breakpoint) {
+  $min-height: get-breakpoint("vertical", $breakpoint);
+  @media screen and (min-height: $min-height) {
+    @content;
+  }
+}
+
+@mixin hd() {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin uhd() {
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx) {
+    @content;
+  }
+}
